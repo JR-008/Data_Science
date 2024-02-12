@@ -1,0 +1,66 @@
+Ciencia de Datos en Python
+José Rodrigo Cano - 23001916
+
+Investigación GIT
+
+*Qué es git?
+-Version Control System: is the process of tracking and managing changes to files over time, and version control software helps automate this process.
+-Other VCS systems use Delta-Based version control which focus on files and the changes made on them over time
+
+ 
+
+
+-Git thinks of its data more like a series of snapshots of a miniature filesystem.
+-With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored. Git thinks about its data more like a stream of snapshots.
+
+ 
+
+-Most operations in Git need only local files and resources to operate — generally no information is needed from another computer on your network.
+-Because you have the entire history of the project right there on your local disk, most operations seem almost instantaneous.
+-Everything in Git is checksummed before it is stored and is then referred to by that checksum. This means it’s impossible to change the contents of any file or directory without Git knowing about it.
+-The mechanism that Git uses for this checksumming is called a SHA-1 hash. This is a 40-character string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git.
+-Git stores everything in its database not by file name but by the hash value of its contents.
+-When you do actions in Git, nearly all of them only add data to the Git database. It is hard to get the system to do anything that is not undoable or to make it erase data in any way.
+-Git has three main states that your files can reside in: modified, staged, and committed:
+*Modified means that you have changed the file but have not committed it to your database yet.
+*Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+*Committed means that the data is safely stored in your local database.
+-This leads us to the three main sections of a Git project: the working tree, the staging area, and the Git directory.
+ 
+
+The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.
+
+The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.
+
+The Git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a repository from another computer.
+
+The basic Git workflow goes something like this:
+
+You modify files in your working tree.
+
+You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+
+You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+If a particular version of a file is in the Git directory, it’s considered committed. If it has been modified and was added to the staging area, it is staged. And if it was changed since it was checked out but has not been staged, it is modified.
+
+
+*Qué es github?
+GitHub is an online software development platform. It's used for storing, tracking, and collaborating on software projects.
+
+>How does it work?
+First, all the code and documentation are in one place. This limits issues with access for anyone who wants to contribute to a project. Each repository also contains instructions and other details to help outline project goals and rules.
+
+Next, coding is more creative and abstract than most non-technical people think it is. For example, say two devs are working on different pieces of code. These two pieces of code should work together. But sometimes one piece of code can make the other code fail. Or a piece of code can have an unexpected impact on how the other code works.
+
+GitHub solves these problems by showing how both files will change the main branch. It catches these errors before pushing changes, making the coding process more efficient.
+
+GitHub also makes it easier to track changes and go back to previous versions of a project.
+
+>What is it used for?
+GitHub allows software developers and engineers to create remote, public-facing repositories on the cloud for free. A repository, or "repo" for short, is a coding project’s files and the revision history for each file.
+
+
+*Qué son las MagicCells?
+-MAGIC (Markov Affinity-based Graph Imputation of Cells), is a method for imputing missing values restoring structure of large biological datasets.
+-Markov Affinity-based Graph Imputation of Cells (MAGIC) is an algorithm for denoising high-dimensional data most commonly applied to single-cell RNA sequencing data. MAGIC learns the manifold data, using the resultant graph to smooth the features and restore the structure of the data.
